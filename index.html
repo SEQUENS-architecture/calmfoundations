@@ -4,318 +4,281 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calm Foundations</title>
+<meta name="description" content="Gentle tuition and wellbeing support for children in Cairo and online, from a qualified primary teacher.">
+<meta property="og:title" content="Calm Foundations">
+<meta property="og:description" content="Gentle tuition and wellbeing support for children in Cairo and online, from a qualified primary teacher.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Layout: friendly single page; colour-coded service cards, a four-step path, then contact. */
-  --bg:#F6F9F7; --surface:#FFFFFF; --ink:#1D3B39; --muted:#4F6663;
-  --accent:#2F7D6D; --sun:#F2B33D; --coral:#E8806A; --lilac:#8C7BC0; --sky:#4F9BC9;
-  --tint:#E6F1EC; --line:#D6E3DE;
-  --display:"Baloo 2", "Trebuchet MS", system-ui, sans-serif;
-  --body:"Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  /* Layout: one quiet centred column, wide margins, thin rules instead of boxes, slow soft colour. */
+  --paper:#F7F6F2; --paper2:#EFEEE8; --ink:#2F3A37; --soft:#5E6B67; --line:#DCDDD5;
+  --sage:#7C9488; --sage-deep:#4E6A5E; --mist:#DDE6E1; --clay:#C9A78F;
+  --display:"Quicksand", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Nunito", "Segoe UI", system-ui, sans-serif;
+  --peach:#F6DCCB; --sky:#D6E6F2; --lav:#E3DCF0; --sun:#F6E7B8; --leaf:#D8E8DC;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#12201F; --surface:#1A2C2A; --ink:#E9F2EF; --muted:#A9BDB8; --accent:#5DC0A9; --tint:#1F3633; --line:#2C4542; color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#12201F; --surface:#1A2C2A; --ink:#E9F2EF; --muted:#A9BDB8; --accent:#5DC0A9; --tint:#1F3633; --line:#2C4542; color-scheme:dark}
+  --paper:#1B2120; --paper2:#212827; --ink:#E7ECE9; --soft:#A9B6B1; --line:#33403C; --sage:#93AC9F; --sage-deep:#A9C3B6; --mist:#26302D; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1B2120; --paper2:#212827; --ink:#E7ECE9; --soft:#A9B6B1; --line:#33403C; --sage:#93AC9F; --sage-deep:#A9C3B6; --mist:#26302D; color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
-h2{font-size:clamp(28px,4vw,38px)}
-h3{font-size:22px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.75}
+a{color:var(--sage-deep);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+.col{max-width:720px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.25;text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(34px,5vw,50px);letter-spacing:-.005em}
+h2{font-size:clamp(26px,3.4vw,32px)}
+h3{font-size:21px;font-weight:700}
 p{margin:0}
-.lead{font-size:19px;color:var(--muted);max-width:60ch}
+.soft{color:var(--soft)}
+.label{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep);font-weight:600}
 
-/* nav */
-nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:22px;font-weight:700;color:var(--ink);text-decoration:none}
-.brand svg{width:34px;height:34px}
-.links{display:flex;gap:18px;flex-wrap:wrap}
-.links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
-.links a:hover{color:var(--accent)}
-.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border:0;border-radius:999px;padding:12px 22px;font-size:16px;font-family:var(--body);cursor:pointer}
-.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
-.menubtn{display:none;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:16px;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;min-height:44px;cursor:pointer}
-.bars,.bars:before,.bars:after{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;position:relative}
-.bars:before,.bars:after{content:"";position:absolute;left:0}.bars:before{top:-6px}.bars:after{top:6px}
-.menu-cta{display:none}
+/* top bar */
+header{border-bottom:1px solid var(--line)}
+.bar{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.name{font-family:var(--display);font-size:22px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:12px;min-height:44px}
+.mk{display:block;width:40px;height:40px}.mk svg{width:100%;height:100%;display:block}
+.name{font-weight:700}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+nav a{color:#4D5955;text-decoration:none;font-size:16px}
+nav a:hover{color:var(--ink)}
+.menubtn{display:none;font:inherit;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 18px;min-height:44px;cursor:pointer}
 @media (max-width:900px){
-  nav .wrap{flex-wrap:wrap}
-  .navcta{display:none}
-  .menubtn{display:inline-flex;order:2;margin-left:auto}
-  .brand{order:1}
-  .links{order:3;display:none;flex-basis:100%;flex-direction:column;gap:0;padding:6px 0 10px}
-  .links.open{display:flex}
-  .links a{padding:14px 4px;font-size:18px;border-top:1px solid var(--line)}
-  .links .menu-cta{display:block;margin-top:8px;text-align:center;background:var(--accent);color:#fff;border-radius:999px;border:0}
+  .menubtn{display:inline-block}
+  nav{flex-basis:100%;display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:6px 0}
+  nav a{display:block;padding:14px 2px;border-top:1px solid var(--line);font-size:18px;color:var(--ink)}
 }
 
-/* hero */
-.hero{padding:56px 0 40px}
-.hero .wrap{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(36px,5.6vw,58px)}
-.hero h1 span{color:var(--accent)}
-.hero .lead{margin:18px 0 26px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.reassure{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:15px;color:var(--muted)}
-.reassure b{color:var(--ink)}
-.art{width:100%;max-width:420px;justify-self:center}
-@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.art{max-width:300px}}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:20;background:var(--sage-deep);color:#fff;padding:12px 18px;border-radius:0 0 12px 0;font-weight:700;text-decoration:none}
+.skip:focus{left:0}
+header{position:sticky;top:0;z-index:10;background:var(--paper)}
+.tools{display:flex;gap:10px;align-items:center;margin-left:auto}
+.rs{font:inherit;font-size:16px;font-weight:700;color:var(--ink);background:var(--paper2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;min-height:44px;cursor:pointer}
+.rs[aria-pressed="true"]{background:var(--sage-deep);color:#fff;border-color:var(--sage-deep)}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;border-radius:8px}
+nav a[aria-current="true"]{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:var(--sage)}
+html.easy body{font-size:20px;line-height:1.9;letter-spacing:.02em;word-spacing:.08em}
+html.easy .help p,html.easy p,html.easy li{max-width:60ch}
+@media (min-width:901px){.bar{flex-wrap:nowrap}.tools{order:3;margin-left:0}nav{margin-left:auto}nav ul{gap:20px}}
+@media (min-width:901px) and (max-width:1100px){.rs span{display:none}nav ul{gap:14px}nav a{font-size:15px}}
+@media (max-width:900px){
+  .bar{padding:12px 16px}
+  .name{font-size:19px;gap:10px}
+  nav a{display:flex;width:100%;padding:0 4px;border-top:1px solid var(--line);font-size:18px;color:var(--ink);min-height:52px}
+  .menubtn{padding:8px 16px}
+}
+@media (max-width:900px){.rs span{display:none}}
+@media (max-width:380px){.mk{width:32px;height:32px}.name{font-size:18px}.rs,.menubtn{padding:8px 12px}}
 
 /* sections */
-section{padding:56px 0}
-.head{display:grid;gap:12px;margin-bottom:28px}
-.kick{font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+section{padding:88px 0;scroll-margin-top:84px}
+section+section{border-top:1px solid var(--line)}
+.hero{padding:112px 0 96px;text-align:left}
+.hero p.lead{font-size:21px;color:var(--soft);margin-top:24px;max-width:34ch}
+.gentle{display:inline-block;margin-top:36px;color:#fff;background:var(--sage-deep);text-decoration:none;border-radius:999px;padding:14px 28px;font-weight:700}
+.gentle:hover{background:var(--ink)}
+.stack>*+*{margin-top:20px}
 
-/* who */
-.who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.who div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
-.who h3{font-size:20px;margin-bottom:6px}
-@media (max-width:820px){.who{grid-template-columns:1fr}}
-
-/* services */
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.svc{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;display:grid;gap:10px;border-top:8px solid var(--c)}
-.svc .ic{width:44px;height:44px;border-radius:14px;background:color-mix(in srgb,var(--c) 18%,transparent);display:grid;place-items:center}
-.svc .ic svg{width:26px;height:26px;stroke:var(--c);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.svc ul{margin:4px 0 0;padding-left:20px;color:var(--muted)}
-.svc li{margin:3px 0}
-.svc .for{font-size:14px;font-weight:700;color:var(--muted)}
-.svc.wide{grid-column:1/-1}
-@media (max-width:820px){.services{grid-template-columns:1fr}}
+/* help list */
+.help{list-style:none;margin:40px 0 0;padding:0}
+.help{display:grid;gap:0}
+.help li{padding:26px 0 26px 46px;border-top:1px solid var(--line);position:relative;display:grid;gap:4px}
+.help li:last-child{border-bottom:1px solid var(--line)}
+.help li:before{content:"";position:absolute;left:2px;top:34px;width:24px;height:15px;border-radius:50%;background:var(--c)}
+.help h3{color:var(--ink)}
+.help p{color:var(--soft)}
 
 /* steps */
-.band{background:var(--tint)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
-.step{background:var(--surface);border-radius:18px;padding:20px;position:relative}
-.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--sun);color:#1D3B39;font-family:var(--display);font-weight:700;font-size:20px;margin-bottom:10px}
-.step h3{font-size:19px;margin-bottom:4px}
-.step p{font-size:15.5px;color:var(--muted)}
-@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.steps{list-style:none;margin:40px 0 0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 32px 56px}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;background:var(--sun);color:#5B4A1E;font-family:var(--display);font-weight:700;display:grid;place-items:center;font-size:17px}
+.steps li:not(:last-child):after{content:"";position:absolute;left:16px;top:44px;bottom:6px;width:1px;background:var(--line)}
+.steps p{color:var(--soft)}
 
 /* about */
-.about{display:grid;grid-template-columns:1fr;max-width:760px;gap:36px;align-items:center}
-.photo{aspect-ratio:1;border-radius:28px;background:var(--tint);display:grid;place-items:center;text-align:center;color:var(--muted);font-weight:600;padding:20px;border:2px dashed var(--line)}
-.about p+p{margin-top:12px}
-.creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.creds span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
-@media (max-width:820px){.about{grid-template-columns:1fr}.photo{max-width:280px}}
+.about-photo{width:132px;height:132px;border-radius:50%;background:var(--sky);display:grid;place-items:center;text-align:center;color:var(--soft);font-size:13px;line-height:1.4;padding:16px;margin-bottom:32px}
+.quiet{background:var(--paper2)}
+.kids{background:var(--peach);border-radius:28px;padding:40px 36px;color:#3B3330}.kids h2{color:#3B3330}.kids .label{color:#6E4228}
+@media (max-width:640px){.kids{padding:30px 24px}}
+blockquote{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(22px,3vw,26px);line-height:1.5;color:var(--ink)}
+blockquote+p{margin-top:20px}
 
 /* faq */
-details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-bottom:10px}
-summary{font-weight:700;cursor:pointer}
-details p{margin-top:8px;color:var(--muted)}
+details{border-top:1px solid var(--line);padding:22px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--sage-deep);font-family:var(--body)}
+details[open] summary:after{content:"\2212"}
+details p{margin-top:12px;color:var(--soft)}
 
 /* contact */
-.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
-form{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;display:grid;gap:14px}
-label{font-weight:700;font-size:15px;display:grid;gap:6px}
-input,textarea,select{width:100%;min-width:0;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
-textarea{min-height:110px;resize:vertical}
-.note{font-size:15px;color:var(--muted)}
-.done{display:none;background:var(--tint);border-radius:14px;padding:14px;font-weight:600}
-.cinfo{display:grid;gap:14px;align-content:start}
-.cinfo div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
-.cinfo b{display:block}
-@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+form{margin-top:40px;display:grid;gap:22px}
+label{display:grid;gap:8px;font-size:16px;color:var(--soft)}
+input,textarea,select{font:inherit;font-size:17px;color:var(--ink);background:var(--paper2);border:1px solid var(--line);padding:12px 16px;width:100%;min-height:48px;border-radius:14px}
+input:focus,textarea:focus,select:focus{border-color:var(--sage);outline:none}
+textarea{min-height:120px;resize:vertical}
+button.send{justify-self:start;font:inherit;font-weight:700;color:var(--paper);background:var(--sage-deep);border:0;border-radius:999px;padding:14px 30px;min-height:48px;cursor:pointer}
+.done{display:none;color:var(--sage-deep)}
+.note{font-size:15px;color:var(--soft)}
+#privacy p{color:var(--soft);font-size:16px}
+.details{margin-top:48px;display:grid;gap:6px;color:var(--soft)}
+.details b{color:var(--ink);font-weight:600}
 
-footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
-/* tablet */
-@media (max-width:1024px) and (min-width:641px){
-  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .who{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .contact{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-}
-@media (max-width:820px) and (min-width:641px){
-  .who{grid-template-columns:minmax(0,1fr)}
-  .contact{grid-template-columns:minmax(0,1fr)}
-  .cinfo{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-/* phone */
+footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--soft);font-size:15px}
 @media (max-width:640px){
-  body{font-size:16px}
-  .wrap{padding:0 16px}
-  section{padding:40px 0}
-  .hero{padding:32px 0 20px}
-  .hero h1{font-size:34px}
-  .lead{font-size:17px}
-  .cta{flex-direction:column}
-  .cta .btn{text-align:center;width:100%}
-  .reassure{gap:8px 14px}
-  .services{grid-template-columns:minmax(0,1fr)}
-  .svc{padding:20px}
-  .who div,.step,form{padding:18px}
-  .head{margin-bottom:20px}
-  details{padding:14px 16px}
-  summary{min-height:28px}
-  footer .wrap{flex-direction:column}
+  body{font-size:17px}
+  section{padding:64px 0}
+  .hero{padding:72px 0 64px}
+  .hero p.lead{font-size:19px}
 }
-.btn{min-height:44px;line-height:1.25}
-input,select,textarea{font-size:16px;min-height:44px}
-html{-webkit-text-size-adjust:100%}
+ul.help li p{color:var(--soft)}
+.ph{background:var(--mist);color:var(--ink);border-radius:4px;padding:0 4px}
 </style>
 </head>
 <body>
 
-<nav aria-label="Main">
-  <div class="wrap">
-    <a class="brand" href="#top">
-      Calm Foundations
-    </a>
-    <div class="links" id="menu">
-      <a href="#services">Services</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact" class="menu-cta">Book a free call</a>
-    </div>
-    <a class="btn navcta" href="#contact">Book a free call</a>
-    <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu"><span class="bars" aria-hidden="true"></span>Menu</button>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="wrap">
-    <div>
-      <h1>Helping children feel <span>calm, confident</span> and ready to learn</h1>
-      <p class="lead">One-to-one tuition, emotional wellbeing support and creative art sessions for children, plus practical advice for parents of children with SEN or behaviour needs, and support for schools.</p>
-      <div class="cta">
-        <a class="btn" href="#contact">Book a free 20-minute call</a>
-        <a class="btn ghost" href="#services">See what I offer</a>
-      </div>
-      <div class="reassure">
-        <span><b>Qualified teacher</b></span><span><b>SEN</b> experience</span><span><b>In person</b> or online</span>
-      </div>
-    </div>
+<a class="skip" href="#top">Skip to main content</a>
+<header>
+  <div class="bar">
+    <a class="name" href="#top" aria-label="Calm Foundations, back to the top"><span class="mk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+  <path d="M100.000,94.120 L99.999,94.430 L99.995,94.648 L99.989,94.841 L99.981,95.019 L99.971,95.188 L99.958,95.348 L99.943,95.503 L99.925,95.652 L99.905,95.797 L99.883,95.938 L99.858,96.076 L99.831,96.211 L99.802,96.343 L99.770,96.473 L99.737,96.601 L99.700,96.726 L99.662,96.850 L99.621,96.971 L99.577,97.092 L99.532,97.210 L99.484,97.327 L99.433,97.442 L99.381,97.556 L99.326,97.669 L99.269,97.780 L99.209,97.891 L99.147,98.000 L99.083,98.108 L99.016,98.214 L98.947,98.320 L98.876,98.425 L98.803,98.529 L98.727,98.631 L98.649,98.733 L98.568,98.834 L98.485,98.934 L98.400,99.033 L98.313,99.131 L98.223,99.228 L98.131,99.325 L98.037,99.420 L97.940,99.515 L97.841,99.609 L97.740,99.702 L97.637,99.794 L97.531,99.886 L97.423,99.977 L97.312,100.067 L97.200,100.156 L97.085,100.245 L96.968,100.332 L96.848,100.420 L96.726,100.506 L96.602,100.592 L96.476,100.676 L96.347,100.761 L96.216,100.844 L96.083,100.927 L95.948,101.009 L95.810,101.090 L95.670,101.171 L95.528,101.251 L95.384,101.330 L95.237,101.409 L95.088,101.487 L94.937,101.564 L94.783,101.641 L94.628,101.717 L94.470,101.792 L94.310,101.867 L94.147,101.941 L93.983,102.014 L93.816,102.087 L93.647,102.158 L93.475,102.230 L93.302,102.300 L93.126,102.370 L92.948,102.440 L92.768,102.508 L92.586,102.576 L92.401,102.644 L92.214,102.710 L92.025,102.776 L91.834,102.842 L91.640,102.906 L91.444,102.970 L91.246,103.034 L91.046,103.096 L90.844,103.158 L90.639,103.220 L90.433,103.281 L90.224,103.341 L90.012,103.400 L89.799,103.459 L89.583,103.517 L89.366,103.575 L89.145,103.631 L88.923,103.688 L88.699,103.743 L88.472,103.798 L88.243,103.852 L88.012,103.906 L87.779,103.958 L87.543,104.011 L87.305,104.062 L87.066,104.113 L86.823,104.163 L86.579,104.213 L86.332,104.262 L86.083,104.310 L85.832,104.358 L85.579,104.404 L85.323,104.451 L85.065,104.496 L84.805,104.541 L84.542,104.585 L84.277,104.629 L84.010,104.672 L83.741,104.714 L83.469,104.756 L83.195,104.797 L82.919,104.837 L82.640,104.876 L82.359,104.915 L82.075,104.953 L81.790,104.991 L81.501,105.028 L81.211,105.064 L80.917,105.099 L80.622,105.134 L80.324,105.168 L80.023,105.202 L79.720,105.235 L79.414,105.267 L79.106,105.298 L78.795,105.329 L78.481,105.359 L78.165,105.388 L77.846,105.417 L77.524,105.445 L77.200,105.472 L76.872,105.499 L76.542,105.525 L76.208,105.550 L75.872,105.575 L75.532,105.599 L75.190,105.622 L74.844,105.644 L74.495,105.666 L74.142,105.687 L73.786,105.708 L73.427,105.728 L73.063,105.747 L72.696,105.765 L72.325,105.783 L71.950,105.800 L71.570,105.816 L71.186,105.832 L70.797,105.847 L70.404,105.861 L70.005,105.874 L69.601,105.887 L69.191,105.899 L68.775,105.911 L68.353,105.922 L67.923,105.932 L67.486,105.941 L67.041,105.950 L66.586,105.958 L66.122,105.965 L65.647,105.972 L65.158,105.978 L64.655,105.983 L64.135,105.987 L63.595,105.991 L63.028,105.994 L62.427,105.997 L61.777,105.999 L61.043,106.000 L60.000,106.000 L58.957,106.000 L58.223,105.999 L57.573,105.997 L56.972,105.994 L56.405,105.991 L55.865,105.987 L55.345,105.983 L54.842,105.978 L54.353,105.972 L53.878,105.965 L53.414,105.958 L52.959,105.950 L52.514,105.941 L52.077,105.932 L51.647,105.922 L51.225,105.911 L50.809,105.899 L50.399,105.887 L49.995,105.874 L49.596,105.861 L49.203,105.847 L48.814,105.832 L48.430,105.816 L48.050,105.800 L47.675,105.783 L47.304,105.765 L46.937,105.747 L46.573,105.728 L46.214,105.708 L45.858,105.687 L45.505,105.666 L45.156,105.644 L44.810,105.622 L44.468,105.599 L44.128,105.575 L43.792,105.550 L43.458,105.525 L43.128,105.499 L42.800,105.472 L42.476,105.445 L42.154,105.417 L41.835,105.388 L41.519,105.359 L41.205,105.329 L40.894,105.298 L40.586,105.267 L40.280,105.235 L39.977,105.202 L39.676,105.168 L39.378,105.134 L39.083,105.099 L38.789,105.064 L38.499,105.028 L38.210,104.991 L37.925,104.953 L37.641,104.915 L37.360,104.876 L37.081,104.837 L36.805,104.797 L36.531,104.756 L36.259,104.714 L35.990,104.672 L35.723,104.629 L35.458,104.585 L35.195,104.541 L34.935,104.496 L34.677,104.451 L34.421,104.404 L34.168,104.358 L33.917,104.310 L33.668,104.262 L33.421,104.213 L33.177,104.163 L32.934,104.113 L32.695,104.062 L32.457,104.011 L32.221,103.958 L31.988,103.906 L31.757,103.852 L31.528,103.798 L31.301,103.743 L31.077,103.688 L30.855,103.631 L30.634,103.575 L30.417,103.517 L30.201,103.459 L29.988,103.400 L29.776,103.341 L29.567,103.281 L29.361,103.220 L29.156,103.158 L28.954,103.096 L28.754,103.034 L28.556,102.970 L28.360,102.906 L28.166,102.842 L27.975,102.776 L27.786,102.710 L27.599,102.644 L27.414,102.576 L27.232,102.508 L27.052,102.440 L26.874,102.370 L26.698,102.300 L26.525,102.230 L26.353,102.158 L26.184,102.087 L26.017,102.014 L25.853,101.941 L25.690,101.867 L25.530,101.792 L25.372,101.717 L25.217,101.641 L25.063,101.564 L24.912,101.487 L24.763,101.409 L24.616,101.330 L24.472,101.251 L24.330,101.171 L24.190,101.090 L24.052,101.009 L23.917,100.927 L23.784,100.844 L23.653,100.761 L23.524,100.676 L23.398,100.592 L23.274,100.506 L23.152,100.420 L23.032,100.332 L22.915,100.245 L22.800,100.156 L22.688,100.067 L22.577,99.977 L22.469,99.886 L22.363,99.794 L22.260,99.702 L22.159,99.609 L22.060,99.515 L21.963,99.420 L21.869,99.325 L21.777,99.228 L21.687,99.131 L21.600,99.033 L21.515,98.934 L21.432,98.834 L21.351,98.733 L21.273,98.631 L21.197,98.529 L21.124,98.425 L21.053,98.320 L20.984,98.214 L20.917,98.108 L20.853,98.000 L20.791,97.891 L20.731,97.780 L20.674,97.669 L20.619,97.556 L20.567,97.442 L20.516,97.327 L20.468,97.210 L20.423,97.092 L20.379,96.971 L20.338,96.850 L20.300,96.726 L20.263,96.601 L20.230,96.473 L20.198,96.343 L20.169,96.211 L20.142,96.076 L20.117,95.938 L20.095,95.797 L20.075,95.652 L20.057,95.503 L20.042,95.348 L20.029,95.188 L20.019,95.019 L20.011,94.841 L20.005,94.648 L20.001,94.430 L20.000,94.120 L20.001,93.768 L20.005,93.520 L20.011,93.301 L20.019,93.098 L20.029,92.907 L20.042,92.724 L20.057,92.549 L20.075,92.379 L20.095,92.214 L20.117,92.054 L20.142,91.897 L20.169,91.744 L20.198,91.593 L20.230,91.446 L20.263,91.301 L20.300,91.158 L20.338,91.018 L20.379,90.880 L20.423,90.743 L20.468,90.609 L20.516,90.476 L20.567,90.345 L20.619,90.215 L20.674,90.087 L20.731,89.960 L20.791,89.835 L20.853,89.711 L20.917,89.589 L20.984,89.467 L21.053,89.347 L21.124,89.228 L21.197,89.110 L21.273,88.993 L21.351,88.878 L21.432,88.763 L21.515,88.650 L21.600,88.537 L21.687,88.426 L21.777,88.315 L21.869,88.206 L21.963,88.097 L22.060,87.989 L22.159,87.883 L22.260,87.777 L22.363,87.672 L22.469,87.568 L22.577,87.465 L22.688,87.362 L22.800,87.261 L22.915,87.160 L23.032,87.060 L23.152,86.961 L23.274,86.863 L23.398,86.766 L23.524,86.670 L23.653,86.574 L23.784,86.479 L23.917,86.385 L24.052,86.292 L24.190,86.199 L24.330,86.107 L24.472,86.017 L24.616,85.926 L24.763,85.837 L24.912,85.748 L25.063,85.661 L25.217,85.574 L25.372,85.487 L25.530,85.402 L25.690,85.317 L25.853,85.233 L26.017,85.150 L26.184,85.067 L26.353,84.985 L26.525,84.904 L26.698,84.824 L26.874,84.745 L27.052,84.666 L27.232,84.588 L27.414,84.511 L27.599,84.434 L27.786,84.358 L27.975,84.283 L28.166,84.209 L28.360,84.136 L28.556,84.063 L28.754,83.991 L28.954,83.920 L29.156,83.849 L29.361,83.779 L29.567,83.710 L29.776,83.642 L29.988,83.574 L30.201,83.508 L30.417,83.441 L30.634,83.376 L30.855,83.312 L31.077,83.248 L31.301,83.185 L31.528,83.122 L31.757,83.061 L31.988,83.000 L32.221,82.940 L32.457,82.881 L32.695,82.822 L32.934,82.764 L33.177,82.707 L33.421,82.651 L33.668,82.595 L33.917,82.540 L34.168,82.486 L34.421,82.433 L34.677,82.381 L34.935,82.329 L35.195,82.278 L35.458,82.228 L35.723,82.178 L35.990,82.129 L36.259,82.081 L36.531,82.034 L36.805,81.988 L37.081,81.942 L37.360,81.897 L37.641,81.853 L37.925,81.809 L38.210,81.767 L38.499,81.725 L38.789,81.684 L39.083,81.643 L39.378,81.604 L39.676,81.565 L39.977,81.527 L40.280,81.490 L40.586,81.453 L40.894,81.418 L41.205,81.383 L41.519,81.349 L41.835,81.315 L42.154,81.283 L42.476,81.251 L42.800,81.220 L43.128,81.189 L43.458,81.160 L43.792,81.131 L44.128,81.103 L44.468,81.076 L44.810,81.050 L45.156,81.024 L45.505,80.999 L45.858,80.975 L46.214,80.952 L46.573,80.930 L46.937,80.908 L47.304,80.887 L47.675,80.867 L48.050,80.848 L48.430,80.829 L48.814,80.811 L49.203,80.794 L49.596,80.778 L49.995,80.763 L50.399,80.748 L50.809,80.734 L51.225,80.721 L51.647,80.709 L52.077,80.697 L52.514,80.687 L52.959,80.677 L53.414,80.668 L53.878,80.660 L54.353,80.652 L54.842,80.645 L55.345,80.639 L55.865,80.634 L56.405,80.630 L56.972,80.626 L57.573,80.624 L58.223,80.622 L58.957,80.620 L60.000,80.620 L61.043,80.620 L61.777,80.622 L62.427,80.624 L63.028,80.626 L63.595,80.630 L64.135,80.634 L64.655,80.639 L65.158,80.645 L65.647,80.652 L66.122,80.660 L66.586,80.668 L67.041,80.677 L67.486,80.687 L67.923,80.697 L68.353,80.709 L68.775,80.721 L69.191,80.734 L69.601,80.748 L70.005,80.763 L70.404,80.778 L70.797,80.794 L71.186,80.811 L71.570,80.829 L71.950,80.848 L72.325,80.867 L72.696,80.887 L73.063,80.908 L73.427,80.930 L73.786,80.952 L74.142,80.975 L74.495,80.999 L74.844,81.024 L75.190,81.050 L75.532,81.076 L75.872,81.103 L76.208,81.131 L76.542,81.160 L76.872,81.189 L77.200,81.220 L77.524,81.251 L77.846,81.283 L78.165,81.315 L78.481,81.349 L78.795,81.383 L79.106,81.418 L79.414,81.453 L79.720,81.490 L80.023,81.527 L80.324,81.565 L80.622,81.604 L80.917,81.643 L81.211,81.684 L81.501,81.725 L81.790,81.767 L82.075,81.809 L82.359,81.853 L82.640,81.897 L82.919,81.942 L83.195,81.988 L83.469,82.034 L83.741,82.081 L84.010,82.129 L84.277,82.178 L84.542,82.228 L84.805,82.278 L85.065,82.329 L85.323,82.381 L85.579,82.433 L85.832,82.486 L86.083,82.540 L86.332,82.595 L86.579,82.651 L86.823,82.707 L87.066,82.764 L87.305,82.822 L87.543,82.881 L87.779,82.940 L88.012,83.000 L88.243,83.061 L88.472,83.122 L88.699,83.185 L88.923,83.248 L89.145,83.312 L89.366,83.376 L89.583,83.441 L89.799,83.508 L90.012,83.574 L90.224,83.642 L90.433,83.710 L90.639,83.779 L90.844,83.849 L91.046,83.920 L91.246,83.991 L91.444,84.063 L91.640,84.136 L91.834,84.209 L92.025,84.283 L92.214,84.358 L92.401,84.434 L92.586,84.511 L92.768,84.588 L92.948,84.666 L93.126,84.745 L93.302,84.824 L93.475,84.904 L93.647,84.985 L93.816,85.067 L93.983,85.150 L94.147,85.233 L94.310,85.317 L94.470,85.402 L94.628,85.487 L94.783,85.574 L94.937,85.661 L95.088,85.748 L95.237,85.837 L95.384,85.926 L95.528,86.017 L95.670,86.107 L95.810,86.199 L95.948,86.292 L96.083,86.385 L96.216,86.479 L96.347,86.574 L96.476,86.670 L96.602,86.766 L96.726,86.863 L96.848,86.961 L96.968,87.060 L97.085,87.160 L97.200,87.261 L97.312,87.362 L97.423,87.465 L97.531,87.568 L97.637,87.672 L97.740,87.777 L97.841,87.883 L97.940,87.989 L98.037,88.097 L98.131,88.206 L98.223,88.315 L98.313,88.426 L98.400,88.537 L98.485,88.650 L98.568,88.763 L98.649,88.878 L98.727,88.993 L98.803,89.110 L98.876,89.228 L98.947,89.347 L99.016,89.467 L99.083,89.589 L99.147,89.711 L99.209,89.835 L99.269,89.960 L99.326,90.087 L99.381,90.215 L99.433,90.345 L99.484,90.476 L99.532,90.609 L99.577,90.743 L99.621,90.880 L99.662,91.018 L99.700,91.158 L99.737,91.301 L99.770,91.446 L99.802,91.593 L99.831,91.744 L99.858,91.897 L99.883,92.054 L99.905,92.214 L99.925,92.379 L99.943,92.549 L99.958,92.724 L99.971,92.907 L99.981,93.098 L99.989,93.301 L99.995,93.520 L99.999,93.768Z" fill="#4E6A5E" shape-rendering="geometricPrecision"/>
+  <path d="M89.000,66.440 L88.999,66.692 L88.997,66.870 L88.992,67.027 L88.986,67.173 L88.979,67.310 L88.969,67.441 L88.958,67.567 L88.946,67.688 L88.931,67.806 L88.915,67.922 L88.897,68.034 L88.878,68.144 L88.856,68.252 L88.834,68.357 L88.809,68.461 L88.783,68.564 L88.755,68.664 L88.725,68.763 L88.694,68.861 L88.660,68.958 L88.626,69.053 L88.589,69.147 L88.551,69.240 L88.511,69.332 L88.470,69.423 L88.427,69.512 L88.382,69.601 L88.335,69.689 L88.287,69.776 L88.237,69.862 L88.185,69.948 L88.132,70.032 L88.077,70.116 L88.020,70.199 L87.962,70.281 L87.902,70.362 L87.840,70.443 L87.777,70.523 L87.712,70.602 L87.645,70.681 L87.577,70.759 L87.507,70.836 L87.435,70.912 L87.362,70.988 L87.287,71.064 L87.210,71.138 L87.131,71.212 L87.051,71.286 L86.970,71.358 L86.886,71.430 L86.801,71.502 L86.715,71.573 L86.627,71.643 L86.537,71.713 L86.445,71.782 L86.352,71.851 L86.257,71.919 L86.160,71.986 L86.062,72.053 L85.962,72.120 L85.861,72.185 L85.758,72.250 L85.653,72.315 L85.547,72.379 L85.439,72.443 L85.329,72.506 L85.218,72.568 L85.105,72.630 L84.991,72.691 L84.875,72.752 L84.757,72.812 L84.637,72.872 L84.517,72.931 L84.394,72.990 L84.270,73.048 L84.144,73.105 L84.016,73.162 L83.887,73.219 L83.757,73.275 L83.624,73.330 L83.491,73.385 L83.355,73.439 L83.218,73.493 L83.079,73.546 L82.939,73.599 L82.797,73.651 L82.654,73.703 L82.509,73.754 L82.362,73.805 L82.214,73.855 L82.064,73.904 L81.912,73.953 L81.759,74.002 L81.604,74.050 L81.448,74.097 L81.290,74.144 L81.130,74.190 L80.969,74.236 L80.807,74.281 L80.642,74.326 L80.476,74.370 L80.309,74.413 L80.140,74.457 L79.969,74.499 L79.796,74.541 L79.622,74.583 L79.447,74.623 L79.270,74.664 L79.091,74.704 L78.910,74.743 L78.728,74.782 L78.544,74.820 L78.359,74.858 L78.172,74.895 L77.983,74.931 L77.793,74.967 L77.601,75.003 L77.407,75.038 L77.212,75.072 L77.015,75.106 L76.816,75.139 L76.616,75.172 L76.414,75.204 L76.210,75.236 L76.005,75.267 L75.797,75.298 L75.588,75.328 L75.378,75.357 L75.165,75.386 L74.951,75.415 L74.735,75.442 L74.517,75.470 L74.297,75.496 L74.075,75.522 L73.852,75.548 L73.626,75.573 L73.399,75.598 L73.170,75.622 L72.938,75.645 L72.705,75.668 L72.470,75.690 L72.232,75.712 L71.993,75.733 L71.751,75.753 L71.507,75.773 L71.261,75.793 L71.013,75.812 L70.762,75.830 L70.509,75.848 L70.253,75.865 L69.995,75.882 L69.734,75.898 L69.471,75.914 L69.205,75.929 L68.935,75.943 L68.663,75.957 L68.388,75.970 L68.110,75.983 L67.828,75.995 L67.543,76.007 L67.254,76.018 L66.961,76.028 L66.664,76.038 L66.362,76.047 L66.056,76.056 L65.744,76.064 L65.427,76.072 L65.105,76.079 L64.775,76.086 L64.439,76.092 L64.094,76.097 L63.740,76.102 L63.375,76.106 L62.998,76.110 L62.606,76.113 L62.195,76.115 L61.760,76.117 L61.288,76.119 L60.756,76.120 L60.000,76.120 L59.244,76.120 L58.712,76.119 L58.240,76.117 L57.805,76.115 L57.394,76.113 L57.002,76.110 L56.625,76.106 L56.260,76.102 L55.906,76.097 L55.561,76.092 L55.225,76.086 L54.895,76.079 L54.573,76.072 L54.256,76.064 L53.944,76.056 L53.638,76.047 L53.336,76.038 L53.039,76.028 L52.746,76.018 L52.457,76.007 L52.172,75.995 L51.890,75.983 L51.612,75.970 L51.337,75.957 L51.065,75.943 L50.795,75.929 L50.529,75.914 L50.266,75.898 L50.005,75.882 L49.747,75.865 L49.491,75.848 L49.238,75.830 L48.987,75.812 L48.739,75.793 L48.493,75.773 L48.249,75.753 L48.007,75.733 L47.768,75.712 L47.530,75.690 L47.295,75.668 L47.062,75.645 L46.830,75.622 L46.601,75.598 L46.374,75.573 L46.148,75.548 L45.925,75.522 L45.703,75.496 L45.483,75.470 L45.265,75.442 L45.049,75.415 L44.835,75.386 L44.622,75.357 L44.412,75.328 L44.203,75.298 L43.995,75.267 L43.790,75.236 L43.586,75.204 L43.384,75.172 L43.184,75.139 L42.985,75.106 L42.788,75.072 L42.593,75.038 L42.399,75.003 L42.207,74.967 L42.017,74.931 L41.828,74.895 L41.641,74.858 L41.456,74.820 L41.272,74.782 L41.090,74.743 L40.909,74.704 L40.730,74.664 L40.553,74.623 L40.378,74.583 L40.204,74.541 L40.031,74.499 L39.860,74.457 L39.691,74.413 L39.524,74.370 L39.358,74.326 L39.193,74.281 L39.031,74.236 L38.870,74.190 L38.710,74.144 L38.552,74.097 L38.396,74.050 L38.241,74.002 L38.088,73.953 L37.936,73.904 L37.786,73.855 L37.638,73.805 L37.491,73.754 L37.346,73.703 L37.203,73.651 L37.061,73.599 L36.921,73.546 L36.782,73.493 L36.645,73.439 L36.509,73.385 L36.376,73.330 L36.243,73.275 L36.113,73.219 L35.984,73.162 L35.856,73.105 L35.730,73.048 L35.606,72.990 L35.483,72.931 L35.363,72.872 L35.243,72.812 L35.125,72.752 L35.009,72.691 L34.895,72.630 L34.782,72.568 L34.671,72.506 L34.561,72.443 L34.453,72.379 L34.347,72.315 L34.242,72.250 L34.139,72.185 L34.038,72.120 L33.938,72.053 L33.840,71.986 L33.743,71.919 L33.648,71.851 L33.555,71.782 L33.463,71.713 L33.373,71.643 L33.285,71.573 L33.199,71.502 L33.114,71.430 L33.030,71.358 L32.949,71.286 L32.869,71.212 L32.790,71.138 L32.713,71.064 L32.638,70.988 L32.565,70.912 L32.493,70.836 L32.423,70.759 L32.355,70.681 L32.288,70.602 L32.223,70.523 L32.160,70.443 L32.098,70.362 L32.038,70.281 L31.980,70.199 L31.923,70.116 L31.868,70.032 L31.815,69.948 L31.763,69.862 L31.713,69.776 L31.665,69.689 L31.618,69.601 L31.573,69.512 L31.530,69.423 L31.489,69.332 L31.449,69.240 L31.411,69.147 L31.374,69.053 L31.340,68.958 L31.306,68.861 L31.275,68.763 L31.245,68.664 L31.217,68.564 L31.191,68.461 L31.166,68.357 L31.144,68.252 L31.122,68.144 L31.103,68.034 L31.085,67.922 L31.069,67.806 L31.054,67.688 L31.042,67.567 L31.031,67.441 L31.021,67.310 L31.014,67.173 L31.008,67.027 L31.003,66.870 L31.001,66.692 L31.000,66.440 L31.001,66.153 L31.003,65.951 L31.008,65.773 L31.014,65.607 L31.021,65.451 L31.031,65.303 L31.042,65.160 L31.054,65.021 L31.069,64.887 L31.085,64.756 L31.103,64.629 L31.122,64.504 L31.144,64.381 L31.166,64.261 L31.191,64.143 L31.217,64.027 L31.245,63.912 L31.275,63.800 L31.306,63.689 L31.340,63.579 L31.374,63.471 L31.411,63.364 L31.449,63.258 L31.489,63.154 L31.530,63.051 L31.573,62.949 L31.618,62.848 L31.665,62.748 L31.713,62.649 L31.763,62.551 L31.815,62.454 L31.868,62.358 L31.923,62.263 L31.980,62.169 L32.038,62.075 L32.098,61.983 L32.160,61.891 L32.223,61.800 L32.288,61.710 L32.355,61.621 L32.423,61.532 L32.493,61.445 L32.565,61.358 L32.638,61.271 L32.713,61.186 L32.790,61.101 L32.869,61.017 L32.949,60.934 L33.030,60.851 L33.114,60.769 L33.199,60.688 L33.285,60.607 L33.373,60.527 L33.463,60.448 L33.555,60.369 L33.648,60.291 L33.743,60.214 L33.840,60.137 L33.938,60.061 L34.038,59.986 L34.139,59.911 L34.242,59.837 L34.347,59.764 L34.453,59.691 L34.561,59.619 L34.671,59.547 L34.782,59.476 L34.895,59.406 L35.009,59.336 L35.125,59.267 L35.243,59.199 L35.363,59.131 L35.483,59.064 L35.606,58.997 L35.730,58.931 L35.856,58.866 L35.984,58.801 L36.113,58.737 L36.243,58.673 L36.376,58.610 L36.509,58.548 L36.645,58.486 L36.782,58.425 L36.921,58.364 L37.061,58.305 L37.203,58.245 L37.346,58.187 L37.491,58.129 L37.638,58.071 L37.786,58.014 L37.936,57.958 L38.088,57.902 L38.241,57.847 L38.396,57.793 L38.552,57.739 L38.710,57.686 L38.870,57.633 L39.031,57.581 L39.193,57.530 L39.358,57.479 L39.524,57.429 L39.691,57.379 L39.860,57.330 L40.031,57.282 L40.204,57.234 L40.378,57.187 L40.553,57.141 L40.730,57.095 L40.909,57.049 L41.090,57.005 L41.272,56.961 L41.456,56.917 L41.641,56.875 L41.828,56.832 L42.017,56.791 L42.207,56.750 L42.399,56.709 L42.593,56.670 L42.788,56.631 L42.985,56.592 L43.184,56.554 L43.384,56.517 L43.586,56.480 L43.790,56.445 L43.995,56.409 L44.203,56.374 L44.412,56.340 L44.622,56.307 L44.835,56.274 L45.049,56.242 L45.265,56.210 L45.483,56.179 L45.703,56.149 L45.925,56.119 L46.148,56.090 L46.374,56.061 L46.601,56.034 L46.830,56.006 L47.062,55.980 L47.295,55.954 L47.530,55.929 L47.768,55.904 L48.007,55.880 L48.249,55.857 L48.493,55.834 L48.739,55.812 L48.987,55.790 L49.238,55.769 L49.491,55.749 L49.747,55.729 L50.005,55.711 L50.266,55.692 L50.529,55.675 L50.795,55.658 L51.065,55.641 L51.337,55.625 L51.612,55.610 L51.890,55.596 L52.172,55.582 L52.457,55.569 L52.746,55.556 L53.039,55.544 L53.336,55.533 L53.638,55.522 L53.944,55.512 L54.256,55.503 L54.573,55.494 L54.895,55.486 L55.225,55.479 L55.561,55.472 L55.906,55.466 L56.260,55.461 L56.625,55.456 L57.002,55.452 L57.394,55.448 L57.805,55.445 L58.240,55.443 L58.712,55.441 L59.244,55.440 L60.000,55.440 L60.756,55.440 L61.288,55.441 L61.760,55.443 L62.195,55.445 L62.606,55.448 L62.998,55.452 L63.375,55.456 L63.740,55.461 L64.094,55.466 L64.439,55.472 L64.775,55.479 L65.105,55.486 L65.427,55.494 L65.744,55.503 L66.056,55.512 L66.362,55.522 L66.664,55.533 L66.961,55.544 L67.254,55.556 L67.543,55.569 L67.828,55.582 L68.110,55.596 L68.388,55.610 L68.663,55.625 L68.935,55.641 L69.205,55.658 L69.471,55.675 L69.734,55.692 L69.995,55.711 L70.253,55.729 L70.509,55.749 L70.762,55.769 L71.013,55.790 L71.261,55.812 L71.507,55.834 L71.751,55.857 L71.993,55.880 L72.232,55.904 L72.470,55.929 L72.705,55.954 L72.938,55.980 L73.170,56.006 L73.399,56.034 L73.626,56.061 L73.852,56.090 L74.075,56.119 L74.297,56.149 L74.517,56.179 L74.735,56.210 L74.951,56.242 L75.165,56.274 L75.378,56.307 L75.588,56.340 L75.797,56.374 L76.005,56.409 L76.210,56.445 L76.414,56.480 L76.616,56.517 L76.816,56.554 L77.015,56.592 L77.212,56.631 L77.407,56.670 L77.601,56.709 L77.793,56.750 L77.983,56.791 L78.172,56.832 L78.359,56.875 L78.544,56.917 L78.728,56.961 L78.910,57.005 L79.091,57.049 L79.270,57.095 L79.447,57.141 L79.622,57.187 L79.796,57.234 L79.969,57.282 L80.140,57.330 L80.309,57.379 L80.476,57.429 L80.642,57.479 L80.807,57.530 L80.969,57.581 L81.130,57.633 L81.290,57.686 L81.448,57.739 L81.604,57.793 L81.759,57.847 L81.912,57.902 L82.064,57.958 L82.214,58.014 L82.362,58.071 L82.509,58.129 L82.654,58.187 L82.797,58.245 L82.939,58.305 L83.079,58.364 L83.218,58.425 L83.355,58.486 L83.491,58.548 L83.624,58.610 L83.757,58.673 L83.887,58.737 L84.016,58.801 L84.144,58.866 L84.270,58.931 L84.394,58.997 L84.517,59.064 L84.637,59.131 L84.757,59.199 L84.875,59.267 L84.991,59.336 L85.105,59.406 L85.218,59.476 L85.329,59.547 L85.439,59.619 L85.547,59.691 L85.653,59.764 L85.758,59.837 L85.861,59.911 L85.962,59.986 L86.062,60.061 L86.160,60.137 L86.257,60.214 L86.352,60.291 L86.445,60.369 L86.537,60.448 L86.627,60.527 L86.715,60.607 L86.801,60.688 L86.886,60.769 L86.970,60.851 L87.051,60.934 L87.131,61.017 L87.210,61.101 L87.287,61.186 L87.362,61.271 L87.435,61.358 L87.507,61.445 L87.577,61.532 L87.645,61.621 L87.712,61.710 L87.777,61.800 L87.840,61.891 L87.902,61.983 L87.962,62.075 L88.020,62.169 L88.077,62.263 L88.132,62.358 L88.185,62.454 L88.237,62.551 L88.287,62.649 L88.335,62.748 L88.382,62.848 L88.427,62.949 L88.470,63.051 L88.511,63.154 L88.551,63.258 L88.589,63.364 L88.626,63.471 L88.660,63.579 L88.694,63.689 L88.725,63.800 L88.755,63.912 L88.783,64.027 L88.809,64.143 L88.834,64.261 L88.856,64.381 L88.878,64.504 L88.897,64.629 L88.915,64.756 L88.931,64.887 L88.946,65.021 L88.958,65.160 L88.969,65.303 L88.979,65.451 L88.986,65.607 L88.992,65.773 L88.997,65.951 L88.999,66.153Z" fill="#9DB5A8" shape-rendering="geometricPrecision"/>
+  <path d="M78.500,43.020 L78.499,43.226 L78.498,43.372 L78.495,43.501 L78.491,43.620 L78.486,43.732 L78.480,43.839 L78.473,43.942 L78.465,44.041 L78.456,44.138 L78.446,44.232 L78.434,44.324 L78.422,44.414 L78.408,44.502 L78.394,44.589 L78.378,44.674 L78.361,44.757 L78.343,44.840 L78.325,44.921 L78.305,45.001 L78.283,45.080 L78.261,45.158 L78.238,45.235 L78.214,45.311 L78.188,45.386 L78.162,45.460 L78.134,45.534 L78.106,45.607 L78.076,45.678 L78.045,45.750 L78.013,45.820 L77.980,45.890 L77.946,45.959 L77.911,46.028 L77.875,46.095 L77.838,46.163 L77.799,46.229 L77.760,46.295 L77.720,46.361 L77.678,46.426 L77.636,46.490 L77.592,46.554 L77.547,46.617 L77.502,46.679 L77.455,46.741 L77.407,46.803 L77.358,46.864 L77.308,46.925 L77.257,46.985 L77.205,47.044 L77.152,47.103 L77.097,47.162 L77.042,47.220 L76.986,47.277 L76.929,47.334 L76.870,47.391 L76.811,47.447 L76.750,47.503 L76.689,47.558 L76.626,47.613 L76.562,47.667 L76.498,47.721 L76.432,47.774 L76.365,47.827 L76.297,47.879 L76.228,47.931 L76.158,47.983 L76.087,48.034 L76.015,48.085 L75.942,48.135 L75.868,48.184 L75.793,48.234 L75.717,48.283 L75.640,48.331 L75.562,48.379 L75.482,48.426 L75.402,48.474 L75.321,48.520 L75.239,48.566 L75.155,48.612 L75.071,48.657 L74.985,48.702 L74.899,48.747 L74.812,48.791 L74.723,48.834 L74.634,48.878 L74.543,48.920 L74.451,48.962 L74.359,49.004 L74.265,49.046 L74.171,49.087 L74.075,49.127 L73.978,49.167 L73.881,49.207 L73.782,49.246 L73.682,49.285 L73.582,49.323 L73.480,49.361 L73.377,49.398 L73.273,49.435 L73.168,49.472 L73.062,49.508 L72.956,49.544 L72.848,49.579 L72.739,49.614 L72.629,49.648 L72.518,49.682 L72.406,49.716 L72.293,49.749 L72.179,49.781 L72.063,49.813 L71.947,49.845 L71.830,49.876 L71.712,49.907 L71.593,49.938 L71.472,49.967 L71.351,49.997 L71.228,50.026 L71.105,50.055 L70.980,50.083 L70.855,50.110 L70.728,50.138 L70.600,50.164 L70.471,50.191 L70.341,50.217 L70.210,50.242 L70.078,50.267 L69.944,50.292 L69.810,50.316 L69.674,50.340 L69.538,50.363 L69.400,50.386 L69.261,50.408 L69.120,50.430 L68.979,50.451 L68.836,50.472 L68.693,50.493 L68.548,50.513 L68.401,50.532 L68.254,50.551 L68.105,50.570 L67.955,50.588 L67.803,50.606 L67.651,50.623 L67.496,50.640 L67.341,50.656 L67.184,50.672 L67.025,50.688 L66.865,50.703 L66.704,50.717 L66.541,50.732 L66.376,50.745 L66.210,50.758 L66.042,50.771 L65.872,50.783 L65.700,50.795 L65.527,50.807 L65.351,50.817 L65.174,50.828 L64.994,50.838 L64.812,50.847 L64.627,50.856 L64.440,50.865 L64.251,50.873 L64.059,50.881 L63.863,50.888 L63.664,50.895 L63.462,50.901 L63.256,50.907 L63.046,50.912 L62.831,50.917 L62.612,50.921 L62.386,50.925 L62.153,50.929 L61.913,50.932 L61.663,50.934 L61.400,50.936 L61.123,50.938 L60.822,50.939 L60.482,50.940 L60.000,50.940 L59.518,50.940 L59.178,50.939 L58.877,50.938 L58.600,50.936 L58.337,50.934 L58.087,50.932 L57.847,50.929 L57.614,50.925 L57.388,50.921 L57.169,50.917 L56.954,50.912 L56.744,50.907 L56.538,50.901 L56.336,50.895 L56.137,50.888 L55.941,50.881 L55.749,50.873 L55.560,50.865 L55.373,50.856 L55.188,50.847 L55.006,50.838 L54.826,50.828 L54.649,50.817 L54.473,50.807 L54.300,50.795 L54.128,50.783 L53.958,50.771 L53.790,50.758 L53.624,50.745 L53.459,50.732 L53.296,50.717 L53.135,50.703 L52.975,50.688 L52.816,50.672 L52.659,50.656 L52.504,50.640 L52.349,50.623 L52.197,50.606 L52.045,50.588 L51.895,50.570 L51.746,50.551 L51.599,50.532 L51.452,50.513 L51.307,50.493 L51.164,50.472 L51.021,50.451 L50.880,50.430 L50.739,50.408 L50.600,50.386 L50.462,50.363 L50.326,50.340 L50.190,50.316 L50.056,50.292 L49.922,50.267 L49.790,50.242 L49.659,50.217 L49.529,50.191 L49.400,50.164 L49.272,50.138 L49.145,50.110 L49.020,50.083 L48.895,50.055 L48.772,50.026 L48.649,49.997 L48.528,49.967 L48.407,49.938 L48.288,49.907 L48.170,49.876 L48.053,49.845 L47.937,49.813 L47.821,49.781 L47.707,49.749 L47.594,49.716 L47.482,49.682 L47.371,49.648 L47.261,49.614 L47.152,49.579 L47.044,49.544 L46.938,49.508 L46.832,49.472 L46.727,49.435 L46.623,49.398 L46.520,49.361 L46.418,49.323 L46.318,49.285 L46.218,49.246 L46.119,49.207 L46.022,49.167 L45.925,49.127 L45.829,49.087 L45.735,49.046 L45.641,49.004 L45.549,48.962 L45.457,48.920 L45.366,48.878 L45.277,48.834 L45.188,48.791 L45.101,48.747 L45.015,48.702 L44.929,48.657 L44.845,48.612 L44.761,48.566 L44.679,48.520 L44.598,48.474 L44.518,48.426 L44.438,48.379 L44.360,48.331 L44.283,48.283 L44.207,48.234 L44.132,48.184 L44.058,48.135 L43.985,48.085 L43.913,48.034 L43.842,47.983 L43.772,47.931 L43.703,47.879 L43.635,47.827 L43.568,47.774 L43.502,47.721 L43.438,47.667 L43.374,47.613 L43.311,47.558 L43.250,47.503 L43.189,47.447 L43.130,47.391 L43.071,47.334 L43.014,47.277 L42.958,47.220 L42.903,47.162 L42.848,47.103 L42.795,47.044 L42.743,46.985 L42.692,46.925 L42.642,46.864 L42.593,46.803 L42.545,46.741 L42.498,46.679 L42.453,46.617 L42.408,46.554 L42.364,46.490 L42.322,46.426 L42.280,46.361 L42.240,46.295 L42.201,46.229 L42.162,46.163 L42.125,46.095 L42.089,46.028 L42.054,45.959 L42.020,45.890 L41.987,45.820 L41.955,45.750 L41.924,45.678 L41.894,45.607 L41.866,45.534 L41.838,45.460 L41.812,45.386 L41.786,45.311 L41.762,45.235 L41.739,45.158 L41.717,45.080 L41.695,45.001 L41.675,44.921 L41.657,44.840 L41.639,44.757 L41.622,44.674 L41.606,44.589 L41.592,44.502 L41.578,44.414 L41.566,44.324 L41.554,44.232 L41.544,44.138 L41.535,44.041 L41.527,43.942 L41.520,43.839 L41.514,43.732 L41.509,43.620 L41.505,43.501 L41.502,43.372 L41.501,43.226 L41.500,43.020 L41.501,42.785 L41.502,42.620 L41.505,42.474 L41.509,42.339 L41.514,42.211 L41.520,42.090 L41.527,41.973 L41.535,41.859 L41.544,41.750 L41.554,41.643 L41.566,41.538 L41.578,41.436 L41.592,41.336 L41.606,41.237 L41.622,41.141 L41.639,41.046 L41.657,40.952 L41.675,40.860 L41.695,40.769 L41.717,40.679 L41.739,40.591 L41.762,40.503 L41.786,40.417 L41.812,40.331 L41.838,40.247 L41.866,40.163 L41.894,40.081 L41.924,39.999 L41.955,39.918 L41.987,39.838 L42.020,39.759 L42.054,39.680 L42.089,39.602 L42.125,39.525 L42.162,39.449 L42.201,39.373 L42.240,39.298 L42.280,39.224 L42.322,39.150 L42.364,39.077 L42.408,39.005 L42.453,38.933 L42.498,38.862 L42.545,38.791 L42.593,38.721 L42.642,38.652 L42.692,38.583 L42.743,38.515 L42.795,38.447 L42.848,38.380 L42.903,38.314 L42.958,38.248 L43.014,38.182 L43.071,38.117 L43.130,38.053 L43.189,37.989 L43.250,37.926 L43.311,37.863 L43.374,37.801 L43.438,37.739 L43.502,37.678 L43.568,37.618 L43.635,37.558 L43.703,37.498 L43.772,37.439 L43.842,37.380 L43.913,37.322 L43.985,37.265 L44.058,37.208 L44.132,37.151 L44.207,37.095 L44.283,37.040 L44.360,36.985 L44.438,36.930 L44.518,36.876 L44.598,36.823 L44.679,36.770 L44.761,36.717 L44.845,36.665 L44.929,36.614 L45.015,36.563 L45.101,36.512 L45.188,36.462 L45.277,36.413 L45.366,36.364 L45.457,36.315 L45.549,36.267 L45.641,36.220 L45.735,36.173 L45.829,36.126 L45.925,36.080 L46.022,36.035 L46.119,35.990 L46.218,35.945 L46.318,35.901 L46.418,35.857 L46.520,35.814 L46.623,35.772 L46.727,35.730 L46.832,35.688 L46.938,35.647 L47.044,35.607 L47.152,35.567 L47.261,35.527 L47.371,35.488 L47.482,35.449 L47.594,35.411 L47.707,35.374 L47.821,35.337 L47.937,35.300 L48.053,35.264 L48.170,35.229 L48.288,35.194 L48.407,35.159 L48.528,35.125 L48.649,35.092 L48.772,35.059 L48.895,35.026 L49.020,34.994 L49.145,34.963 L49.272,34.932 L49.400,34.901 L49.529,34.871 L49.659,34.842 L49.790,34.813 L49.922,34.785 L50.056,34.757 L50.190,34.729 L50.326,34.702 L50.462,34.676 L50.600,34.650 L50.739,34.625 L50.880,34.600 L51.021,34.576 L51.164,34.552 L51.307,34.528 L51.452,34.506 L51.599,34.483 L51.746,34.462 L51.895,34.440 L52.045,34.420 L52.197,34.400 L52.349,34.380 L52.504,34.361 L52.659,34.342 L52.816,34.324 L52.975,34.306 L53.135,34.289 L53.296,34.273 L53.459,34.257 L53.624,34.241 L53.790,34.226 L53.958,34.212 L54.128,34.198 L54.300,34.185 L54.473,34.172 L54.649,34.159 L54.826,34.147 L55.006,34.136 L55.188,34.125 L55.373,34.115 L55.560,34.105 L55.749,34.096 L55.941,34.087 L56.137,34.079 L56.336,34.072 L56.538,34.065 L56.744,34.058 L56.954,34.052 L57.169,34.046 L57.388,34.041 L57.614,34.037 L57.847,34.033 L58.087,34.029 L58.337,34.027 L58.600,34.024 L58.877,34.022 L59.178,34.021 L59.518,34.020 L60.000,34.020 L60.482,34.020 L60.822,34.021 L61.123,34.022 L61.400,34.024 L61.663,34.027 L61.913,34.029 L62.153,34.033 L62.386,34.037 L62.612,34.041 L62.831,34.046 L63.046,34.052 L63.256,34.058 L63.462,34.065 L63.664,34.072 L63.863,34.079 L64.059,34.087 L64.251,34.096 L64.440,34.105 L64.627,34.115 L64.812,34.125 L64.994,34.136 L65.174,34.147 L65.351,34.159 L65.527,34.172 L65.700,34.185 L65.872,34.198 L66.042,34.212 L66.210,34.226 L66.376,34.241 L66.541,34.257 L66.704,34.273 L66.865,34.289 L67.025,34.306 L67.184,34.324 L67.341,34.342 L67.496,34.361 L67.651,34.380 L67.803,34.400 L67.955,34.420 L68.105,34.440 L68.254,34.462 L68.401,34.483 L68.548,34.506 L68.693,34.528 L68.836,34.552 L68.979,34.576 L69.120,34.600 L69.261,34.625 L69.400,34.650 L69.538,34.676 L69.674,34.702 L69.810,34.729 L69.944,34.757 L70.078,34.785 L70.210,34.813 L70.341,34.842 L70.471,34.871 L70.600,34.901 L70.728,34.932 L70.855,34.963 L70.980,34.994 L71.105,35.026 L71.228,35.059 L71.351,35.092 L71.472,35.125 L71.593,35.159 L71.712,35.194 L71.830,35.229 L71.947,35.264 L72.063,35.300 L72.179,35.337 L72.293,35.374 L72.406,35.411 L72.518,35.449 L72.629,35.488 L72.739,35.527 L72.848,35.567 L72.956,35.607 L73.062,35.647 L73.168,35.688 L73.273,35.730 L73.377,35.772 L73.480,35.814 L73.582,35.857 L73.682,35.901 L73.782,35.945 L73.881,35.990 L73.978,36.035 L74.075,36.080 L74.171,36.126 L74.265,36.173 L74.359,36.220 L74.451,36.267 L74.543,36.315 L74.634,36.364 L74.723,36.413 L74.812,36.462 L74.899,36.512 L74.985,36.563 L75.071,36.614 L75.155,36.665 L75.239,36.717 L75.321,36.770 L75.402,36.823 L75.482,36.876 L75.562,36.930 L75.640,36.985 L75.717,37.040 L75.793,37.095 L75.868,37.151 L75.942,37.208 L76.015,37.265 L76.087,37.322 L76.158,37.380 L76.228,37.439 L76.297,37.498 L76.365,37.558 L76.432,37.618 L76.498,37.678 L76.562,37.739 L76.626,37.801 L76.689,37.863 L76.750,37.926 L76.811,37.989 L76.870,38.053 L76.929,38.117 L76.986,38.182 L77.042,38.248 L77.097,38.314 L77.152,38.380 L77.205,38.447 L77.257,38.515 L77.308,38.583 L77.358,38.652 L77.407,38.721 L77.455,38.791 L77.502,38.862 L77.547,38.933 L77.592,39.005 L77.636,39.077 L77.678,39.150 L77.720,39.224 L77.760,39.298 L77.799,39.373 L77.838,39.449 L77.875,39.525 L77.911,39.602 L77.946,39.680 L77.980,39.759 L78.013,39.838 L78.045,39.918 L78.076,39.999 L78.106,40.081 L78.134,40.163 L78.162,40.247 L78.188,40.331 L78.214,40.417 L78.238,40.503 L78.261,40.591 L78.283,40.679 L78.305,40.769 L78.325,40.860 L78.343,40.952 L78.361,41.046 L78.378,41.141 L78.394,41.237 L78.408,41.336 L78.422,41.436 L78.434,41.538 L78.446,41.643 L78.456,41.750 L78.465,41.859 L78.473,41.973 L78.480,42.090 L78.486,42.211 L78.491,42.339 L78.495,42.474 L78.498,42.620 L78.499,42.785Z" fill="#E7B99A" shape-rendering="geometricPrecision"/>
+</svg></span>Calm Foundations</a>
+    <div class="tools"><button class="rs" id="rs" aria-pressed="false" title="Larger text and more spacing">Aa<span> Easier reading</span></button><button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu">Menu</button></div>
+    <nav id="nav" aria-label="Main">
+      <ul><li><a href="#help">Services</a></li><li><a href="#children">For children</a></li><li><a href="#begin">How we begin</a></li><li><a href="#about">About</a></li><li><a href="#questions">Questions</a></li><li><a href="#contact">Get in touch</a></li></ul>
+    </nav>
   </div>
 </header>
 
-<section aria-labelledby="who-h">
-  <div class="wrap">
-    <div class="head"><p class="kick">Who I help</p><h2 id="who-h">Support for the whole circle around a child</h2></div>
-    <div class="who">
-      <div><h3>Children</h3><p>Who are anxious, struggling to keep up, finding friendships hard, or just need someone in their corner.</p></div>
-      <div><h3>Parents</h3><p>Who want calm, practical strategies for SEN, behaviour, meltdowns, routines and working with school.</p></div>
-      <div><h3>Schools</h3><p>That want to strengthen inclusion, wellbeing, PSHE and behaviour across a class or the whole school.</p></div>
-    </div>
+<main id="top">
+<section class="hero">
+  <div class="col">
+    <h1>Gentle tuition and wellbeing support for children</h1>
+    <p class="lead">One-to-one support from a qualified primary teacher with 18 years&rsquo; experience, for children who are finding school hard, with learning or with how they feel.</p>
+    <a class="gentle" href="#contact">Book a free consultation</a>
   </div>
 </section>
 
-<section id="services" aria-labelledby="svc-h">
-  <div class="wrap">
-    <div class="head"><p class="kick">Services</p><h2 id="svc-h">What I offer</h2><p class="lead">Every session is planned around your child. Mix and match: many families combine tuition with wellbeing support.</p></div>
-    <div class="services">
-      <article class="svc" style="--c:#4F9BC9">
-        <h3>One-to-one tuition</h3>
-        <p class="for">Ages 4 to 11 · in person or online</p>
-        <p>Patient, structured teaching that fills gaps and builds confidence.</p>
-        <ul><li>Reading, writing, phonics and spelling</li><li>Maths: number, times tables, problem solving</li><li>Preparing for tests and moving up to secondary</li></ul>
-      </article>
-      <article class="svc" style="--c:#E8806A">
-        <h3>Social and emotional learning and PSHE</h3>
-        <p class="for">Individual or small groups</p>
-        <p>Helping children understand their feelings and get along with others.</p>
-        <ul><li>Naming and managing big feelings</li><li>Friendships, confidence and self-esteem</li><li>Worry, change and transitions</li></ul>
-      </article>
-      <article class="svc" style="--c:#8C7BC0">
-        <h3>Therapeutic art</h3>
-        <p class="for">Ages 4 to 12 · individual sessions</p>
-        <p>A calm, creative space where children can express what is hard to put into words.</p>
-        <ul><li>Painting, drawing, clay and collage</li><li>Building calm and self-regulation</li><li>No art skills needed</li></ul>
-      </article>
-      <article class="svc" style="--c:#2F7D6D">
-        <h3>School consultancy</h3>
-        <p class="for">For leaders, teachers and support staff</p>
-        <p>Practical support that works in real classrooms.</p>
-        <ul><li>Inclusion, SEN and adaptive teaching</li><li>Behaviour and wellbeing approaches</li><li>PSHE planning, staff training and coaching</li></ul>
-      </article>
-      <article class="svc wide" style="--c:#F2B33D">
-        <h3>Parent advice: SEN and behaviour</h3>
-        <p class="for">One-off consultations or regular check-ins</p>
-        <p>Clear, kind, practical advice for home and for working with your child&rsquo;s school.</p>
-        <ul><li>Understanding your child&rsquo;s needs and what helps</li><li>Routines, meltdowns, boundaries and calm-down plans</li><li>Preparing for school meetings and support plans</li></ul>
-      </article>
-    </div>
+<section id="help">
+  <div class="col">
+    <h2>Services</h2>
+    <ul class="help">
+      <li style="--c:#4E6A5E"><h3>Gentle tuition</h3><p>Reading, phonics, writing and maths for children aged 4 to 11, at a pace that suits each child. Beginner French and Spanish are also available.</p></li>
+      <li style="--c:#9DB5A8"><h3>Feelings and friendships</h3><p>PSHE and wellbeing support, including nurture sessions and restorative conversations, led by an experienced Head of PSHE and Wellbeing.</p></li>
+      <li style="--c:#E7B99A"><h3>Art and mindfulness</h3><p>Drawing, painting and simple mindfulness to help children settle and manage difficult feelings, delivered by a Mindful Schools trained teacher. This is wellbeing support, not therapy.</p></li>
+      <li style="--c:#4E6A5E"><h3>Advice for parents</h3><p>Practical guidance on behaviour, routines and additional needs, drawing on training in dyslexia, ADHD and autism and experience on special educational needs teams.</p></li>
+      <li style="--c:#9DB5A8"><h3>Support for schools</h3><p>Development of PSHE and wellbeing programmes, restorative practice and positive behaviour approaches, with training for staff.</p></li>
+    </ul>
   </div>
 </section>
 
-<section id="how" class="band" aria-labelledby="how-h">
-  <div class="wrap">
-    <div class="head"><p class="kick">How it works</p><h2 id="how-h">Four simple steps</h2></div>
-    <div class="steps">
-      <div class="step"><h3>Free call</h3><p>A relaxed 20-minute chat about your child and what you would like to change.</p></div>
-      <div class="step"><h3>Getting to know you</h3><p>A first session to understand your child&rsquo;s strengths, needs and interests.</p></div>
-      <div class="step"><h3>A clear plan</h3><p>Agreed goals, session times and simple ideas you can use at home.</p></div>
-      <div class="step"><h3>Regular updates</h3><p>Short progress notes, so you always know how things are going.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="about" aria-labelledby="about-h">
-  <div class="wrap about">
-        <div>
-      <p class="kick">About me</p>
-      <h2 id="about-h">Hello, I&rsquo;m [Name]</h2>
-      <p style="margin-top:14px">I am a qualified teacher with [number] years&rsquo; experience in primary schools, with a particular interest in children&rsquo;s wellbeing, special educational needs and creative learning.</p>
-      <p>I believe every child learns best when they feel safe, understood and successful. My sessions are calm, encouraging and fun, and I work closely with parents and schools so that children get the same support everywhere.</p>
-      <div class="creds"><span>Qualified Teacher Status</span><span>[Art therapy or creative arts training]</span><span>Safeguarding trained</span><span>[Location]</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="band" aria-labelledby="faq-h">
-  <div class="wrap">
-    <div class="head"><p class="kick">Questions</p><h2 id="faq-h">Frequently asked</h2></div>
-    <details><summary>Where do sessions take place?</summary><p>In your home, at a quiet local venue, or online. School consultancy takes place on site or online.</p></details>
-    <details><summary>How long is a session?</summary><p>Tuition and wellbeing sessions are usually 45 to 60 minutes. Parent consultations are 60 minutes.</p></details>
-    <details><summary>Does my child need a diagnosis?</summary><p>No. I support children with and without a diagnosis, and can help you think about next steps if you have concerns.</p></details>
-    <details><summary>Will you talk to my child&rsquo;s school?</summary><p>Yes, with your permission. Working together helps children get consistent support.</p></details>
-    <details><summary>How much does it cost?</summary><p>[Add prices here, or say: Please get in touch for current prices and packages.]</p></details>
-  </div>
-</section>
-
-<section id="contact" aria-labelledby="c-h">
-  <div class="wrap">
-    <div class="head"><p class="kick">Get in touch</p><h2 id="c-h">Book a free 20-minute call</h2><p class="lead">Tell me a little about your child or your school and I will get back to you within two working days.</p></div>
-    <div class="contact">
-      <form id="f" novalidate>
-        <label for="n">Your name<input id="n" name="n" required autocomplete="name"></label>
-        <label for="e">Email<input id="e" name="e" type="email" required autocomplete="email"></label>
-        <label for="s">I am interested in
-          <select id="s" name="s"><option>One-to-one tuition</option><option>Social and emotional learning and PSHE</option><option>Therapeutic art</option><option>Parent advice: SEN and behaviour</option><option>School consultancy</option><option>Not sure yet</option></select>
-        </label>
-        <label for="m">Message<textarea id="m" name="m" placeholder="Your child's age, what you'd like help with, and the best time to call"></textarea></label>
-        <button class="btn" type="submit">Send message</button>
-        <p class="done" id="done" role="status">Thank you. To send this, please email [email address] and I will reply within two working days.</p>
-      </form>
-      <div class="cinfo">
-        <div><b>Email</b>[email address]</div>
-        <div><b>Phone or WhatsApp</b>[phone number]</div>
-        <div><b>Area</b>[Location] and online</div>
-        <div class="note">All work follows safeguarding good practice. Information you share is kept confidential and only shared with your permission.</div>
+<section id="children">
+  <div class="col">
+    <div class="kids">
+      <h2>Hello! This part is for you.</h2>
+      <div class="stack" style="margin-top:18px">
+        <p>In a session we might read a story, play a maths game, draw, or chat about your week. We go at your speed.</p>
+        <p>Mistakes are fine. If something feels too hard or too easy, just say so and wejust tell me and we&rsquo;ll change itrsquo;ll change it.</p>
+        <p>Your grown-ups will always know what we&rsquo;ve been doing together.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="begin">
+  <div class="col">
+    <h2>Getting started</h2>
+    <ol class="steps">
+      <li><h3>A free chat</h3><p>A 20-minute conversation about your child, what is going well and what has been difficult.</p></li>
+      <li><h3>A first session</h3><p>An initial session to get to know your child and how they learn best.</p></li>
+      <li><h3>A plan</h3><p>Agreed goals, a regular session time and short progress updates.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="about" class="quiet">
+  <div class="col">
+    <h2>About Calm Foundations</h2>
+    <div class="stack" style="margin-top:24px">
+      <p>Sessions are led by a qualified primary teacher (BA Hons in Primary Education with QTS) with 18 years&rsquo; experience in UK, Irish and international schools.</p>
+      <p>Experience includes leading PSHE and wellbeing in British international schools, working on learning support and special educational needs teams, and mentoring newly qualified teachers. French, Arabic and Spanish are spoken.</p>
+      <p>Every programme starts by getting to know the child, so that support fits them from the first session.</p>
+    </div>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="col">
+    <h2 style="margin-bottom:32px">Questions</h2>
+    <details><summary>Where do sessions happen?</summary><p>At home, at a quiet local venue, or online. For online sessions, a parent or carer stays nearby.</p></details>
+    <details><summary>How long is a session?</summary><p>Usually 45 minutes to an hour. Younger children can start with shorter sessions.</p></details>
+    <details><summary>Does my child need a diagnosis?</summary><p>No. Children with and without a diagnosis are welcome. We do not diagnose, but can help you think about next steps and who to speak to.</p></details>
+    <details><summary>Can you work with my child&rsquo;s school?</summary><p>Yes, with your permission. Support works best when home, school and sessions are consistent.</p></details>
+    <details><summary>How do you keep children safe?</summary><p>All sessions follow safeguarding good practice, and you will always know what has been covered. Details of safeguarding training and background checks are available on request.</p></details>
+    <details><summary>How much does it cost?</summary><p>Please get in touch for current prices and packages.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="col">
+    <h2>Book a free consultation</h2>
+    <p class="soft" style="margin-top:16px">Tell us a little about your child and we will reply within two working days.</p>
+    <form id="f" novalidate>
+      <label for="n">Your name<input id="n" autocomplete="name"></label>
+      <label for="e">Email<input id="e" type="email" autocomplete="email"></label>
+      <label for="s">Interested in<select id="s"><option>Gentle tuition</option><option>Feelings and friendships</option><option>Art and mindfulness</option><option>Advice for parents</option><option>Support for schools</option><option>Not sure yet</option></select></label>
+      <label for="m">Your message<textarea id="m" placeholder="Your child&#39;s age, and what you&#39;d like help with"></textarea></label>
+      <p class="note">Please do not include medical details. Your message is used only to reply to you. See <a href="#privacy">privacy</a>.</p>
+      <button class="send" type="submit">Send message</button>
+      <p class="done" id="done" role="status">Thank you. For now, please email hello@calmfoundations.org and we will reply within two working days.</p>
+    </form>
+    <div class="details">
+      <p><b>Email</b> &middot; <a href="mailto:hello@calmfoundations.org">hello@calmfoundations.org</a></p>
+      <p><b>Area</b> &middot; Cairo and online</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<section id="privacy">
+  <div class="col">
+    <h2 style="font-size:24px">Your information</h2>
+    <div class="stack" style="margin-top:18px">
+      <p>If you get in touch, your name, email and message are kept only to reply and arrange sessions. They are never sold or shared, and you can ask for them to be deleted at any time.</p>
+      <p>Notes about your child are stored securely and shared with school only with your agreement. This website does not use tracking or advertising cookies.</p>
+      <p>Questions about your information: hello@calmfoundations.org</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap"><span>&copy; 2026 Calm Foundations</span><span>Tuition · Wellbeing · Therapeutic art · Parent and school support</span></div>
+  <div class="col">&copy; 2026 Calm Foundations &middot; <a href="#privacy">Privacy</a> &middot; Advice here is general and doesn&rsquo;t replace medical or specialist advice.</div>
 </footer>
 
 <script>
-(function(){var b=document.getElementById('menubtn'),m=document.getElementById('menu');
-b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
-m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
-document.getElementById('f').addEventListener('submit', function (ev) {
-  ev.preventDefault();
-  document.getElementById('done').style.display = 'block';
-});
+(function(){var b=document.getElementById('menubtn'),n=document.getElementById('nav'),rs=document.getElementById('rs');
+function setMenu(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');b.textContent=o?'Close':'Menu';}
+b.addEventListener('click',function(){var o=!n.classList.contains('open');setMenu(o);if(o){var f=n.querySelector('a');if(f)f.focus();}});
+n.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){setMenu(false);b.focus();}});
+try{if(localStorage.getItem('cf-easy')==='1'){document.documentElement.classList.add('easy');rs.setAttribute('aria-pressed','true');}}catch(x){}
+rs.addEventListener('click',function(){var on=document.documentElement.classList.toggle('easy');rs.setAttribute('aria-pressed',on?'true':'false');try{localStorage.setItem('cf-easy',on?'1':'0');}catch(x){}});
+var links=[].slice.call(n.querySelectorAll('a'));
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(l){l.removeAttribute('aria-current');if(l.getAttribute('href')==='#'+en.target.id)l.setAttribute('aria-current','true');});}});},{rootMargin:'-40% 0px -55% 0px'});
+links.forEach(function(l){var t=document.querySelector(l.getAttribute('href'));if(t)io.observe(t);});}
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('done').style.display='block';});})();
 </script>
 </body>
 </html>
