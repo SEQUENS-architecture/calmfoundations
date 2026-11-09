@@ -2,13 +2,18 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Calm Foundations</title>
 <meta name="description" content="Gentle tuition and wellbeing support for children in Cairo and online, from a qualified primary teacher.">
 <meta property="og:title" content="Calm Foundations">
 <meta property="og:description" content="Gentle tuition and wellbeing support for children in Cairo and online, from a qualified primary teacher.">
 <meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#F7F6F2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -143,6 +148,25 @@ footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--soft);fo
 }
 ul.help li p{color:var(--soft)}
 .ph{background:var(--mist);color:var(--ink);border-radius:4px;padding:0 4px}
+
+/* mobile fit: one-row header, scrollable open menu, safe area at the bottom */
+@media (max-width:900px){
+  .bar{gap:8px 10px;row-gap:0}
+  .name{flex:0 1 auto;min-width:0;gap:8px;font-size:18px;white-space:nowrap}
+  .mk{width:34px;height:34px;flex:none}
+  .tools{flex:none;gap:8px}
+  .rs,.menubtn{padding:8px 14px}
+  header{max-height:100vh;max-height:100dvh;overflow-y:auto;overscroll-behavior:contain}
+  nav.open{padding-bottom:8px}
+}
+@media (max-width:374px){
+  .bar{padding:10px 12px}
+  .name{font-size:16px;gap:6px}
+  .mk{width:28px;height:28px}
+  .rs,.menubtn{padding:8px 11px;font-size:15px}
+}
+@media (max-width:340px){.name{font-size:15px}.mk{width:24px;height:24px}.rs,.menubtn{padding:6px 9px}.tools{gap:6px}}
+footer{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
 </style>
 </head>
 <body>
